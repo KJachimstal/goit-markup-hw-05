@@ -16,6 +16,8 @@
     --footersocialMediaBackgroundColor: rgba(255, 255, 255, 0.1);
     --bannerBackgroundColorGradient: rgba(47, 48, 58, 0.4);
     --backgroundAboutUs: rgba(47, 48, 58, 0.8);
+    --bodyWindowBackgroundColor: rgba(0, 0, 0, 0.2);
+    --closeButtonBorderColor: rgba(0, 0, 0, 0.1);
 }
 
 /*-------------------------------------- GLOBAL STLES --------------------------------------*/
@@ -306,6 +308,48 @@ body {
     padding: 10px 41px
 }
 
+/*-------------------------------------- MODAL WINDOW STLES --------------------------------------*/
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background: var(--whiteColor);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 11;
+}
+
+.modal-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin: 8px 8px 0 0;
+    width: 30px;
+    height: 30px;
+    background: var(--whiteColor);
+    border: 1px solid var(--closeButtonBorderColor);
+    border-radius: 50%;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bodyWindowBackgroundColor);
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 /*-------------------------------------- DESCRIPTION STLES --------------------------------------*/
 
 .description-list {
@@ -447,8 +491,6 @@ body {
 }
 
 .crew-item-social_media-container {
-    transition-duration: 1250ms;
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: center;
     align-items: center;
