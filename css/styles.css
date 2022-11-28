@@ -101,6 +101,7 @@ body {
 .menu-list {
     display: flex;
     gap: 50px;
+    position: relative;
 }
 
 .menu-list li a:hover,
@@ -111,10 +112,23 @@ body {
 }
 
 .menu-item {
+    position: relative;
     font-weight: 500;
     line-height: 16px;
     letter-spacing: 0.02em;
     color: var(--secondaryPageColor);
+}
+
+.menu-list li a:hover .menu-item-border,
+.menu-list li a:focus .menu-item-border {
+    position: absolute;
+    bottom: -33px;
+    background-color: var(--mainPageColor);
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .menu-contact-list {
