@@ -121,16 +121,13 @@ body {
     color: var(--secondaryPageColor);
 }
 
-.menu-list li a:hover .menu-item-border,
-.menu-list li a:focus .menu-item-border {
+.menu-item-border{
     position: absolute;
-    bottom: -33px;
+    bottom: -32px;
     background-color: var(--mainPageColor);
     height: 4px;
     width: 100%;
     border-radius: 2px;
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
 }
 
 .menu-contact-list {
