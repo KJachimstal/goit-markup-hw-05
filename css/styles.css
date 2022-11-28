@@ -18,6 +18,7 @@
     --backgroundAboutUs: rgba(47, 48, 58, 0.8);
     --bodyWindowBackgroundColor: rgba(0, 0, 0, 0.2);
     --closeButtonBorderColor: rgba(0, 0, 0, 0.1);
+    --portfolioOverlayColor: rgba(33, 150, 243, 0.9);
 }
 
 /*-------------------------------------- GLOBAL STLES --------------------------------------*/
@@ -121,7 +122,7 @@ body {
     color: var(--secondaryPageColor);
 }
 
-.menu-item-border{
+.menu-item-border {
     position: absolute;
     bottom: -32px;
     background-color: var(--mainPageColor);
@@ -577,6 +578,30 @@ body {
     margin-bottom: 50px;
 }
 
+.portfolio-item-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--portfolioOverlayColor);
+    transform: translatey(100%);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+.portfolio-item-overlay p {
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--whiteColor);
+    padding: 49px 45px 49px 24px;
+}
+
 .portfolio-item-list {
     display: flex;
     justify-content: center;
@@ -588,6 +613,13 @@ body {
 .portfolio-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+.portfolio-item:hover .portfolio-item-overlay,
+.portfolio-item:focus .portfolio-item-overlay {
+    transform: translatey(0);
     transition: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
 }
