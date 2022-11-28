@@ -105,6 +105,8 @@ body {
 .menu-list li a:hover,
 .menu-list li a:focus {
     color: var(--mainPageColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .menu-item {
@@ -133,7 +135,8 @@ body {
 .menu-contact-item:hover .icon,
 .menu-contact-item:focus .icon {
     fill: var(--mainPageColor);
-    ;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .menu-item-active {
@@ -237,11 +240,15 @@ body {
 .footer-social_media-container:hover,
 .footer-social_media-container:focus {
     background-color: var(--mainPageColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .footer-social_media-container:hover .footer-social_media-icon,
 .footer-social_media-container:focus .footer-social_media-icon {
     fill: var(--whiteColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 /*-------------------------------------- BANNER STLES --------------------------------------*/
@@ -405,6 +412,8 @@ body {
 }
 
 .crew-item-social_media-container {
+    transition-duration: 1250ms;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -417,11 +426,15 @@ body {
 .crew-item-social_media-container:focus {
     background-color: var(--mainPageColor);
     fill: var(--whiteColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .crew-item-social_media-container:hover .crew-item-social_media-icon,
 .crew-item-social_media-container:focus .crew-item-social_media-icon {
     fill: var(--whiteColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 /*-------------------------------------- CLIENTS STLES --------------------------------------*/
@@ -453,11 +466,15 @@ body {
 .clients-list-container:hover,
 .clients-list-container:focus {
     border: 1px solid var(--mainPageColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .clients-list-container:hover .clients-list-logo,
 .clients-list-container:focus .clients-list-logo {
     fill: var(--mainPageColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .clients-list-logo {
@@ -497,6 +514,8 @@ body {
 .portfolio-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .portfolio-item-container {
@@ -524,4 +543,6 @@ body {
     color: var(--whiteColor);
     background: var(--mainPageColor);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
