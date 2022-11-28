@@ -15,6 +15,7 @@
     --socialMediaColor: #AFB1B8;
     --footersocialMediaBackgroundColor: rgba(255, 255, 255, 0.1);
     --bannerBackgroundColorGradient: rgba(47, 48, 58, 0.4);
+    --backgroundAboutUs: rgba(47, 48, 58, 0.8);
 }
 
 /*-------------------------------------- GLOBAL STLES --------------------------------------*/
@@ -340,6 +341,28 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
+}
+
+.about_us-list li {
+    position: relative;
+}
+
+.about_us-list-description {
+    background-color: var(--backgroundAboutUs);
+    width: 370px;
+    position: absolute;
+    bottom: 0;
+}
+
+.about_us-list-description>h3 {
+    text-align: center;
+    padding: 27px 0;
+    color: var(--whiteColor);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
 
 .about_us-title {
