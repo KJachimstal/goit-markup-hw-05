@@ -187,11 +187,24 @@ body {
     gap: 70px;
 }
 
+.footer-list li:first-child a{
+    color: var(--whiteColor);
+}
+
 .footer-item:not(:last-child) {
     margin-bottom: 9px;
 }
 
-.footer-item a {
+.footer-item:hover,
+.footer-item:focus,
+.footer-list li:first-child a:hover,
+.footer-list li:first-child a:focus {
+    color: var(--mainPageColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+.footer-list a {
     line-height: 1.71;
 }
 
@@ -201,17 +214,6 @@ body {
 
 .footer-navigation a {
     color: var(--footerContactColor);
-}
-
-.footer-navigation a:hover,
-.footer-navigation li:first-child a:hover {
-    color: var(--mainPageColor);
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
-}
-
-.footer-navigation li:first-child a {
-    color: var(--whiteColor);
 }
 
 .footer-social_media-title {
