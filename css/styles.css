@@ -209,6 +209,13 @@ body {
     color: var(--footerContactColor);
 }
 
+.footer-navigation a:hover,
+.footer-navigation li:first-child a:hover {
+    color: var(--mainPageColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
 .footer-navigation li:first-child a {
     color: var(--whiteColor);
 }
