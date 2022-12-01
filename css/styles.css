@@ -488,6 +488,8 @@ body {
 .crew-item-social_media-container:focus {
     background-color: var(--mainPageColor);
     color: var(--whiteColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 /*-------------------------------------- CLIENTS STLES --------------------------------------*/
@@ -520,6 +522,8 @@ body {
 .clients-list-container:hover,
 .clients-list-container:focus {
     color: var(--mainPageColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .clients-list-logo {
@@ -583,6 +587,8 @@ body {
 .portfolio-item-link:focus {
     display: block;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .portfolio-item-container {
