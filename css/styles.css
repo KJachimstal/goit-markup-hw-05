@@ -583,10 +583,17 @@ body {
     gap: 30px;
 }
 
-.portfolio-item-link:hover,
-.portfolio-item-link:focus {
+.portfolio-item:hover,
+.portfolio-item:focus {
     display: block;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+.portfolio-item:hover .portfolio-item-overlay,
+.portfolio-item:focus .portfolio-item-overlay {
+    transform: translatey(0);
     transition: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
 }
