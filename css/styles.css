@@ -127,13 +127,7 @@ body {
 }
 
 .menu-contact-item .icon {
-    fill: var(--contactColor);
-}
-
-.menu-contact-item:hover .icon,
-.menu-contact-item:focus .icon {
-    fill: var(--mainPageColor);
-    ;
+    fill: currentColor;
 }
 
 .menu-item-active {
@@ -170,8 +164,9 @@ body {
     padding: 60px 0;
 }
 
-.footer .container>ul {
+.footer .container {
     display: flex;
+    align-items: baseline;
     gap: 70px;
 }
 
@@ -195,27 +190,17 @@ body {
     color: var(--whiteColor);
 }
 
-.footer-social_media {
-    width: 206px;
-}
-
 .footer-social_media-title {
     font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
+    line-height: 1.14;
     text-transform: uppercase;
     color: var(--whiteColor);
-    margin: 12px 0 20px;
+    margin-bottom: 20px;
 }
 
 .footer-social_media-list {
     display: flex;
     gap: 10px;
-}
-
-.footer-social_media-icon {
-    fill: var(--whiteColor)
 }
 
 .footer-social_media .footer-social_media-icon {
@@ -232,6 +217,7 @@ body {
     height: 44px;
     border-radius: 50%;
     background-color: var(--footersocialMediaBackgroundColor);
+    color: var(--whiteColor);
 }
 
 .footer-social_media-container:hover,
@@ -239,23 +225,17 @@ body {
     background-color: var(--mainPageColor);
 }
 
-.footer-social_media-container:hover .footer-social_media-icon,
-.footer-social_media-container:focus .footer-social_media-icon {
-    fill: var(--whiteColor);
-}
-
 /*-------------------------------------- BANNER STLES --------------------------------------*/
 
 .banner {
-    position: relative;
-    background: var(--bannerBackgroundColor);
+    background-color: var(--bannerBackgroundColor);
     padding: 200px 0;
     text-align: center;
-    background-image: url(./../images/banner.jpg);
-    background-repeat: no-repeat;
     margin: 0 auto;
-    background-color: linear-gradient(var(--bannerBackgroundColorGradient),
-            var(--bannerBackgroundColorGradient));
+    background-image: linear-gradient(var(--bannerBackgroundColorGradient),
+            var(--bannerBackgroundColorGradient)), url(./../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 1600px;
     height: 600px;
 }
@@ -401,7 +381,7 @@ body {
 }
 
 .crew-item-social_media .crew-item-social_media-icon {
-    fill: var(--socialMediaColor);
+    fill: currentColor;
 }
 
 .crew-item-social_media-container {
@@ -411,17 +391,13 @@ body {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    color: var(--socialMediaColor);
 }
 
 .crew-item-social_media-container:hover,
 .crew-item-social_media-container:focus {
     background-color: var(--mainPageColor);
-    fill: var(--whiteColor);
-}
-
-.crew-item-social_media-container:hover .crew-item-social_media-icon,
-.crew-item-social_media-container:focus .crew-item-social_media-icon {
-    fill: var(--whiteColor);
+    color: var(--whiteColor);
 }
 
 /*-------------------------------------- CLIENTS STLES --------------------------------------*/
@@ -446,24 +422,20 @@ body {
     align-items: center;
     width: 170px;
     height: 92px;
-    border: 1px solid var(--socialMediaColor);
+    border: 1px solid currentColor;
     border-radius: 4px;
+    color: var(--socialMediaColor);
 }
 
 .clients-list-container:hover,
 .clients-list-container:focus {
-    border: 1px solid var(--mainPageColor);
-}
-
-.clients-list-container:hover .clients-list-logo,
-.clients-list-container:focus .clients-list-logo {
-    fill: var(--mainPageColor);
+    color: var(--mainPageColor);
 }
 
 .clients-list-logo {
     width: 106px;
     height: 60px;
-    fill: var(--socialMediaColor);
+    fill: currentColor;
 }
 
 /*-------------------------------------- PORTFOLIO STLES --------------------------------------*/
@@ -493,10 +465,10 @@ body {
     gap: 30px;
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-item-link:hover,
+.portfolio-item-link:focus {
+    display: block;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;
 }
 
 .portfolio-item-container {
