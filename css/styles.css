@@ -15,6 +15,10 @@
     --socialMediaColor: #AFB1B8;
     --footersocialMediaBackgroundColor: rgba(255, 255, 255, 0.1);
     --bannerBackgroundColorGradient: rgba(47, 48, 58, 0.4);
+    --backgroundAboutUs: rgba(47, 48, 58, 0.8);
+    --bodyWindowBackgroundColor: rgba(0, 0, 0, 0.2);
+    --closeButtonBorderColor: rgba(0, 0, 0, 0.1);
+    --portfolioOverlayColor: rgba(33, 150, 243, 0.9);
 }
 
 /*-------------------------------------- GLOBAL STLES --------------------------------------*/
@@ -100,18 +104,31 @@ body {
 .menu-list {
     display: flex;
     gap: 50px;
+    position: relative;
 }
 
 .menu-list li a:hover,
 .menu-list li a:focus {
     color: var(--mainPageColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .menu-item {
+    position: relative;
     font-weight: 500;
     line-height: 16px;
     letter-spacing: 0.02em;
     color: var(--secondaryPageColor);
+}
+
+.menu-item-border {
+    position: absolute;
+    bottom: -32px;
+    background-color: var(--mainPageColor);
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
 }
 
 .menu-contact-list {
@@ -186,6 +203,13 @@ body {
     color: var(--footerContactColor);
 }
 
+.footer-navigation a:hover,
+.footer-navigation li:first-child a:hover {
+    color: var(--mainPageColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
 .footer-navigation li:first-child a {
     color: var(--whiteColor);
 }
@@ -223,6 +247,8 @@ body {
 .footer-social_media-container:hover,
 .footer-social_media-container:focus {
     background-color: var(--mainPageColor);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 /*-------------------------------------- BANNER STLES --------------------------------------*/
@@ -264,6 +290,48 @@ body {
     letter-spacing: 0.06em;
     margin: 0 auto;
     padding: 10px 41px
+}
+
+/*-------------------------------------- MODAL WINDOW STLES --------------------------------------*/
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background: var(--whiteColor);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 11;
+}
+
+.modal-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin: 8px 8px 0 0;
+    width: 30px;
+    height: 30px;
+    background: var(--whiteColor);
+    border: 1px solid var(--closeButtonBorderColor);
+    border-radius: 50%;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bodyWindowBackgroundColor);
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 /*-------------------------------------- DESCRIPTION STLES --------------------------------------*/
@@ -313,6 +381,28 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
+}
+
+.about_us-list li {
+    position: relative;
+}
+
+.about_us-list-description {
+    background-color: var(--backgroundAboutUs);
+    width: 370px;
+    position: absolute;
+    bottom: 0;
+}
+
+.about_us-list-description>h3 {
+    text-align: center;
+    padding: 27px 0;
+    color: var(--whiteColor);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
 
 .about_us-title {
@@ -458,6 +548,30 @@ body {
     margin-bottom: 50px;
 }
 
+.portfolio-item-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--portfolioOverlayColor);
+    transform: translatey(100%);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+.portfolio-item-overlay p {
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--whiteColor);
+    padding: 49px 45px 49px 24px;
+}
+
 .portfolio-item-list {
     display: flex;
     justify-content: center;
@@ -496,4 +610,6 @@ body {
     color: var(--whiteColor);
     background: var(--mainPageColor);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }

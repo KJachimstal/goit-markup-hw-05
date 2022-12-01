@@ -26,16 +26,18 @@
                             <a
                                 href="./index.html"
                                 class="menu-item menu-item-active"
-                                >Agencja</a
                             >
+                                Agencja
+                                <div class="menu-item-border"></div>
+                            </a>
                         </li>
                         <li>
-                            <a href="./portfolio.html" class="menu-item"
-                                >Portfolio</a
-                            >
+                            <a href="./portfolio.html" class="menu-item">
+                                Portfolio
+                            </a>
                         </li>
                         <li>
-                            <a href="#" class="menu-item">Kontakt</a>
+                            <a href="#" class="menu-item">Kontakt </a>
                         </li>
                     </ul>
                 </nav>
@@ -79,7 +81,7 @@
                     <h1 class="banner-title">
                         EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
                     </h1>
-                    <button type="button" class="banner-button">
+                    <button type="button" class="banner-button" data-modal-open>
                         Zamów usługe
                     </button>
                 </div>
@@ -174,6 +176,9 @@
                                 width="370"
                                 height="294"
                             />
+                            <div class="about_us-list-description">
+                                <h3>Aplikacje komputerowe</h3>
+                            </div>
                         </li>
                         <li>
                             <img
@@ -182,6 +187,9 @@
                                 width="370"
                                 height="294"
                             />
+                            <div class="about_us-list-description">
+                                <h3>Aplikacje mobilne</h3>
+                            </div>
                         </li>
                         <li>
                             <img
@@ -190,6 +198,9 @@
                                 width="370"
                                 height="294"
                             />
+                            <div class="about_us-list-description">
+                                <h3>Rozwiązania graficzne</h3>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -720,5 +731,15 @@
                 </div>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close" data-modal-close>
+                    <svg width="18" height="18" alt="close icon">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>
