@@ -110,8 +110,6 @@ body {
 .menu-list li a:hover,
 .menu-list li a:focus {
     color: var(--mainPageColor);
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
 }
 
 .menu-item {
@@ -119,16 +117,11 @@ body {
     font-weight: 500;
     line-height: 16px;
     letter-spacing: 0.02em;
+    padding: 32px 0;
     color: var(--secondaryPageColor);
-}
-
-.menu-item-border {
-    position: absolute;
-    bottom: -32px;
-    background-color: var(--mainPageColor);
-    height: 4px;
-    width: 100%;
-    border-radius: 2px;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .menu-contact-list {
@@ -141,6 +134,9 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .menu-contact-item .icon {
@@ -149,6 +145,17 @@ body {
 
 .menu-item-active {
     color: var(--mainPageColor);
+}
+
+.menu-item-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--mainPageColor);
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
 }
 
 /*-------------------------------------- LOGO STLES --------------------------------------*/
@@ -195,13 +202,17 @@ body {
     margin-bottom: 9px;
 }
 
+.footer-item {
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
 .footer-item:hover,
 .footer-item:focus,
 .footer-list li:first-child a:hover,
 .footer-list li:first-child a:focus {
     color: var(--mainPageColor);
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
 }
 
 .footer-list a {
@@ -244,13 +255,14 @@ body {
     border-radius: 50%;
     background-color: var(--footersocialMediaBackgroundColor);
     color: var(--whiteColor);
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .footer-social_media-container:hover,
 .footer-social_media-container:focus {
     background-color: var(--mainPageColor);
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
 }
 
 /*-------------------------------------- BANNER STLES --------------------------------------*/
@@ -328,10 +340,13 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--bodyWindowBackgroundColor);
+    transition-property: opacity, visibility;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .is-hidden {
-    opacity: 0;
+    /* opacity: 0; */
     visibility: hidden;
     pointer-events: none;
 }
@@ -390,21 +405,19 @@ body {
 }
 
 .about_us-list-description {
-    background-color: var(--backgroundAboutUs);
-    width: 370px;
     position: absolute;
-    bottom: 0;
-}
-
-.about_us-list-description>h3 {
-    text-align: center;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 27px 0;
     color: var(--whiteColor);
     font-weight: 700;
-    font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
+    background-color: var(--backgroundAboutUs);
+    height: 70px;
+    width: 370px;
 }
 
 .about_us-title {
@@ -474,6 +487,10 @@ body {
 
 .crew-item-social_media .crew-item-social_media-icon {
     fill: currentColor;
+    transition-property: fill;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    
 }
 
 .crew-item-social_media-container {
@@ -484,14 +501,15 @@ body {
     height: 44px;
     border-radius: 50%;
     color: var(--socialMediaColor);
+    transition-property: background-color, color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .crew-item-social_media-container:hover,
 .crew-item-social_media-container:focus {
     background-color: var(--mainPageColor);
     color: var(--whiteColor);
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
 }
 
 /*-------------------------------------- CLIENTS STLES --------------------------------------*/
@@ -519,13 +537,14 @@ body {
     border: 1px solid currentColor;
     border-radius: 4px;
     color: var(--socialMediaColor);
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .clients-list-container:hover,
 .clients-list-container:focus {
     color: var(--mainPageColor);
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
 }
 
 .clients-list-logo {
@@ -545,6 +564,16 @@ body {
     background: var(--buttonColor);
     color: var(--secondaryPageColor);
     padding: 6px 22px;
+    transition-property: background-color, color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+.portfolio button:hover,
+.portfolio button:focus {
+    color: var(--whiteColor);
+    background: var(--mainPageColor);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-bottons-list {
@@ -566,7 +595,8 @@ body {
     height: 100%;
     background-color: var(--portfolioOverlayColor);
     transform: translatey(100%);
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
 }
 
@@ -585,19 +615,21 @@ body {
     gap: 30px;
 }
 
+.portfolio-item {
+    display: block;
+    transition-property: box-shadow; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
 .portfolio-item:hover,
 .portfolio-item:focus {
-    display: block;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
 }
 
 .portfolio-item:hover .portfolio-item-overlay,
 .portfolio-item:focus .portfolio-item-overlay {
-    transform: translatey(0);
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
+    transform: translateY(0);
 }
 
 .portfolio-item-container {
@@ -618,13 +650,4 @@ body {
     font-size: 16px;
     line-height: 1.87;
     color: var(--contactColor);
-}
-
-.portfolio button:hover,
-.portfolio button:focus {
-    color: var(--whiteColor);
-    background: var(--mainPageColor);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
 }
